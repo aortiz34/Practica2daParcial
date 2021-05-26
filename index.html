@@ -10,31 +10,55 @@
   <body>
     <label>Metodos Numericos </label>
     <div class="enter_numbers">
-      <label>Ingrese el valor de X: </label>
-      <input type="text" id="numberX" /><br /><br />
-      <label>Ingrese el valor de X cero: </label>
-      <input type="text" id="numberXcero" /><br /><br />
-      <label>Ingrese el valor de X uno: </label>
-      <input type="text" id="numberXuno" /><br /><br />
-      <label>Ingrese el valor de X dos : </label>
-      <input type="text" id="numberXdos" /><br /><br />
-      <label>Ingrese el valor de F(x) cero : </label>
-      <input type="text" id="numberFx0" /><br /><br />
-      <label>Ingrese el valor de F(x) uno : </label>
-      <input type="text" id="numberFx1" /><br /><br />
-      <label>Ingrese el valor de F(x) dos : </label>
-      <input type="text" id="numberFx2" /><br /><br />
+     <label id="selectl">Seleccione el método desesado</label>
+     <select class="selec" id="operators">
+        <option value=""></option>
+        <option value="interLineal">Método de la secante</option>
+        <option value="interCuadratica">Método regla falsa</option>
+        <option value="lagrange1">Método de bisección</option>
+     </select>
+     <br>
+      
+     <div class="interaccion">
+        <label>Ingrese el valor de X: </label>
+        <input type="text" id="numberX" /><br /><br />
+        <label>Ingrese el valor de X: </label>
+        <input type="text" id="numberX1" /><br /><br />
+        <label>Ingrese el % de Error deseado : </label>
+        <input type="number" id="error" /><br /><br />
+  
+        <hr/>
+        <button onclick="interpolacion()">Calcular Resultado:</button><br><br>
+     </div>
 
-      <select class="selec" id="operators">
-        <option value="interLineal">Interpolación Lineal</option>
-        <option value="interCuadratica">Interpolación Cuadrática</option>
-        <option value="lagrange1">Lagrange 1er Orden</option>
-        <option value="lagrange2">Lagrange 2do Orden</option>
-      </select>
-
-      <hr />
-      <button onclick="interpolacion()">Calcular Resultado:</button>
-      <input class="final_result" type="text" id="result" />
+      <div class="content-info">
+        <table id="table">
+            <tr>
+                <th></th>
+                <th></th>
+                <th></th>
+            </tr>
+            <tr>
+                <th></th>
+                <th></th>
+                <th></th>
+            </tr>
+          </table>
+          </div>
+          <div class="content-info1">
+          <table id="table1">
+            <tr>
+                <th></th>
+                <th></th>
+                <th></th>
+            </tr>
+            <tr>
+                <th></th>
+                <th></th>
+                <th></th>
+            </tr>
+          </table>
+      </div>
     </div>
     <script src="main.js"></script>
   </body>

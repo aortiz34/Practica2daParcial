@@ -23,7 +23,7 @@ body {
   .enter_numbers {
     box-sizing: border-box;
     position: absolute;
-    top: 60%;
+    top: 50%;
     left: 50%;
     color: white;
     transform: translate(-50%, -50%);
@@ -37,11 +37,32 @@ body {
   .selec {
     background-color: white;
     padding: 5px;
-    margin-bottom: 80px;
+    margin-bottom: 15px;
   }
-  
-  .final_result {
+
+  table {
+      border-radius: 50px;
+      width: 100%;
     background-color: white;
-    margin: 10px;
   }
   
+
+  .content-info1 {
+      border: 2px;
+      border-color: black;
+      width: 50%;
+      float: right;
+  }
+
+  .content-info {
+      border-color: black;
+      width: 50%;
+      float: left;
+  }
+
+  button {
+      float: left;
+  }
+  .interaccion {
+      padding: 0;
+  }
