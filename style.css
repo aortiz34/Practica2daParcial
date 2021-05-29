@@ -41,28 +41,12 @@ body {
   }
 
   table {
-      border-radius: 50px;
+      color: black;
+      border-radius: 20px;
       width: 100%;
     background-color: white;
-  }
-  
-
-  .content-info1 {
-      border: 2px;
-      border-color: black;
-      width: 50%;
-      float: right;
-  }
-
-  .content-info {
-      border-color: black;
-      width: 50%;
-      float: left;
   }
 
   button {
       float: left;
-  }
-  .interaccion {
-      padding: 0;
   }

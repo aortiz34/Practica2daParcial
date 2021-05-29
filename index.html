@@ -11,54 +11,40 @@
     <label>Metodos Numericos </label>
     <div class="enter_numbers">
      <label id="selectl">Seleccione el método desesado</label>
-     <select class="selec" id="operators">
-        <option value=""></option>
-        <option value="interLineal">Método de la secante</option>
-        <option value="interCuadratica">Método regla falsa</option>
-        <option value="lagrange1">Método de bisección</option>
+     <select class="selec" id="metodos">
+        <option value="secante">Método de la secante</option>
+        <option value="reglaFalsa">Método regla falsa</option>
+        <option value="bisección">Método de bisección</option>
+     </select>
+     <br>
+
+     <label id="selectl">Seleccione la formula que quiera resolver</label>
+     <select class="selec" id="ecuaciones">
+        <option value="E1">x3 - x + 3 = 0</option>
+        <option value="E2">x3 + 2x2 + 10x - 20 = 0</option>
+        <option value="E3">x2 - 3x + 1 = 0</option>
      </select>
      <br>
       
-     <div class="interaccion">
-        <label>Ingrese el valor de X: </label>
-        <input type="text" id="numberX" /><br /><br />
-        <label>Ingrese el valor de X: </label>
-        <input type="text" id="numberX1" /><br /><br />
+        <label id="lx0">Ingrese el valor de X0: </label>
+        <input type="number" id="numberX0" /><br /><br />
+        <label id="lx1">Ingrese el valor de X1: </label>
+        <input type="number" id="numberX1" /><br /><br />
         <label>Ingrese el % de Error deseado : </label>
         <input type="number" id="error" /><br /><br />
   
         <hr/>
-        <button onclick="interpolacion()">Calcular Resultado:</button><br><br>
-     </div>
-
-      <div class="content-info">
-        <table id="table">
-            <tr>
-                <th></th>
-                <th></th>
-                <th></th>
-            </tr>
-            <tr>
-                <th></th>
-                <th></th>
-                <th></th>
-            </tr>
-          </table>
-          </div>
-          <div class="content-info1">
-          <table id="table1">
-            <tr>
-                <th></th>
-                <th></th>
-                <th></th>
-            </tr>
-            <tr>
-                <th></th>
-                <th></th>
-                <th></th>
-            </tr>
-          </table>
-      </div>
+        <button onclick="metodo()">Calcular Resultado:</button><br><br>
+            <table id="table">
+                <tr>
+                  <th>X</th>
+                  <th>% Error</th>
+                </tr>
+                <tr>
+                    <td id="x">0</td>
+                    <td id="errort">0</td>
+                </tr>
+            </table>
     </div>
     <script src="main.js"></script>
   </body>
