@@ -1,52 +1,26 @@
-let metodo = document.getElementById("metodos").value;
-if (metodo === "Método regla falsa") {
-  document.getElementById("lx0").value = "Ingrese el valor de Xl: ";
-  document.getElementById("lx1").value = "Ingrese el valor de Xu: ";
-}
-      
-function metodo() {
-    let x0 = parseFloat(document.getElementById("numberX0").value);
-    let x1 = parseFloat(document.getElementById("numberX1").value);
-    let error = parseFloat(document.getElementById("error").value);
-    let metodo = document.getElementById("metodos").value;
-    let ecuacion = document.getElementById("ecuaciones").value;
-  
-    if (metodo === "Método de la secante") {
-      
-      if (ecuacion === "x3 - x + 3 = 0") {
+    function metodo() {
+    let inpXi = document.querySelector('#numberXi');
+    let inpError = document.querySelector('#error');
+    let xi = parseFloat(inpXi.value);
+    let errorAsoluto = parseFloat(inpError.value);
+    let table = document.querySelector('#table');
+    let error = 100;
+    let xi2;
 
-      }
-      
-      if(ecuacion === "x3 + 2x2 + 10x - 20 = 0"){
+    while (error > errorAsoluto) {
+      let división = (3*xi + Math.sin(xi) - Math.exp(xi)) / (3 + Math.cos(xi) - Math.exp(xi));
+      xi2 = xi - división;
+      error = ((xi2 - xi) / xi2) * 100;
+      xi = xi2;
 
-      }else {
+      let row = table.insertRow(-1);
+      let xiCol = row.insertCell(0);
+      let errorCol = row.insertCell(1);
 
-      }
+      xiCol.innerHTML = xi.toFixed(4);
+      errorCol.innerHTML = error.toFixed(4);
     }
-    if (metodo === "Método regla falsa") {
-     
-      if (ecuacion === "x3 - x + 3 = 0") {
+    
 
-      }
-      
-      if(ecuacion === "x3 + 2x2 + 10x - 20 = 0"){
-
-      }else {
-        
-      }
-    }
-  
-    if (metodo === "Método de bisección") {
-     
-      if (ecuacion === "x3 - x + 3 = 0") {
-
-      }
-      
-      if(ecuacion === "x3 + 2x2 + 10x - 20 = 0"){
-
-      }else {
-        
-      }
-    }
   }
   

@@ -10,26 +10,14 @@
   <body>
     <label>Metodos Numericos </label>
     <div class="enter_numbers">
-     <label id="selectl">Seleccione el método desesado</label>
-     <select class="selec" id="metodos">
-        <option value="secante">Método de la secante</option>
-        <option value="reglaFalsa">Método regla falsa</option>
-        <option value="bisección">Método de bisección</option>
-     </select>
-     <br>
+     <label>Metodo de Newton</label>
+     <br /> <br />
 
-     <label id="selectl">Seleccione la formula que quiera resolver</label>
-     <select class="selec" id="ecuaciones">
-        <option value="E1">x3 - x + 3 = 0</option>
-        <option value="E2">x3 + 2x2 + 10x - 20 = 0</option>
-        <option value="E3">x2 - 3x + 1 = 0</option>
-     </select>
-     <br>
+     <label id="selectl">Función: 3x + sen(x) - ex</label>
+     <br /> <br />
       
-        <label id="lx0">Ingrese el valor de X0: </label>
-        <input type="number" id="numberX0" /><br /><br />
-        <label id="lx1">Ingrese el valor de X1: </label>
-        <input type="number" id="numberX1" /><br /><br />
+        <label id="lx0">Ingrese el valor de Xi: </label>
+        <input type="number" id="numberXi" /><br /><br />
         <label>Ingrese el % de Error deseado : </label>
         <input type="number" id="error" /><br /><br />
   
@@ -37,12 +25,8 @@
         <button onclick="metodo()">Calcular Resultado:</button><br><br>
             <table id="table">
                 <tr>
-                  <th>X</th>
+                  <th>Xi</th>
                   <th>% Error</th>
-                </tr>
-                <tr>
-                    <td id="x">0</td>
-                    <td id="errort">0</td>
                 </tr>
             </table>
     </div>
