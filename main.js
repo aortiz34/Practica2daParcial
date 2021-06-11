@@ -6,6 +6,7 @@
     let table = document.querySelector('#table');
     let error = 100;
     let xi2;
+    table.innerHTML = '';
 
     while (error > errorAsoluto) {
       let división = (3*xi + Math.sin(xi) - Math.exp(xi)) / (3 + Math.cos(xi) - Math.exp(xi));
