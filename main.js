@@ -9,7 +9,8 @@
     table.innerHTML = '';
 
     while (error > errorAsoluto) {
-      let división = (3*xi + Math.sin(xi) - Math.exp(xi)) / (3 + Math.cos(xi) - Math.exp(xi));
+      let xinegative = -xi;
+      let división = (Math.exp(xinegative) - xi) / ( - Math.exp(xinegative) - 1);
       xi2 = xi - división;
       error = ((xi2 - xi) / xi2) * 100;
       xi = xi2;
@@ -18,8 +19,8 @@
       let xiCol = row.insertCell(0);
       let errorCol = row.insertCell(1);
 
-      xiCol.innerHTML = xi.toFixed(4);
-      errorCol.innerHTML = error.toFixed(4);
+      xiCol.innerHTML = xi.toFixed(8);
+      errorCol.innerHTML = error.toFixed(8);
     }
     
 
